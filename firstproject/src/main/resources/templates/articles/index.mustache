@@ -1,0 +1,26 @@
+{{>layouts/header}}
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- 가져올 변수앞에 # 선언해서 사용 -->
+    <!-- articleList에 여러개의 data가 있을 경우,
+            안에 있는 코드가 여러번 반복돼서 실행됨 (for 반복문처럼)-->
+    {{#articleList}}
+        <tr>
+            <th>{{id}}</th>
+            <td>{{title}}</td>
+            <td>{{content}}</td>
+        </tr>
+    {{/articleList}}
+    </tbody>
+</table>
+
+
+{{>layouts/footer}}
